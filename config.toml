@@ -2,7 +2,7 @@
 # Version : 0.4.3-BETA
 # Author : Thibaud Leprêtre
 
-baseURL = "https://example.org/"
+baseURL = "https://docinho.github.io/lab3---vis/"
 languageCode = "pt-br"
 defaultContentLanguage = "pt-br"
 title = "Compartilhando experiências com visualização"
