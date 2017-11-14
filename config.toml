@@ -1,0 +1,41 @@
+# Tranquilpeak
+# Version : 0.4.3-BETA
+# Author : Thibaud Leprêtre
+
+baseURL = "https://example.org/"
+languageCode = "pt-br"
+defaultContentLanguage = "pt-br"
+title = "Compartilhando experiências com visualização"
+theme = "hugo-tranquilpeak-theme"
+publishDir = "docs"
+disqusShortname = "hugo-tranquilpeak-theme"
+# googleAnalytics = "UA-123-45"
+paginate = 7
+canonifyurls = true
+
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  archive = "archives"
+
+[author]
+  name = "Livia Cavalcanti"
+  bio = "Graduanda em Ciência da Computação na **UFCG**"
+  job = "Estudante de Iniciação Científica em Sistemas de Recomendação"
+  location = "Brasil"
+  # Your profile picture
+  # Overwritten by your gravatar image if `author.gravatarEmail` is filled
+  picture = "https://avatars1.githubusercontent.com/u/23710238?s=400&u=dd872f38ec6a7c604842ed2ab6db5500ca8f643c&v=4"
+  # Your Twitter username without the @. E.g : thibaudlepretre
+  # twitter = "thibaudlepretre"
+  # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
+  # googlePlus = "+ThibaudLepretre"
+
+# Menu Configuration
+[[menu.main]]
+  weight = 1
+  identifier = "home"
+  name = "Home"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
+  url = "/"
+
