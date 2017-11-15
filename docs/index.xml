@@ -6,19 +6,18 @@
     <description>Recent content on Compartilhando experiências com visualização</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Tue, 14 Nov 2017 08:53:23 -0300</lastBuildDate>
+    <lastBuildDate>Wed, 15 Nov 2017 15:10:45 -0300</lastBuildDate>
     
 	<atom:link href="https://docinho.github.io/lab3---vis/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Primeiro Post</title>
-      <link>https://docinho.github.io/lab3---vis/post/primeiro-post/</link>
-      <pubDate>Tue, 14 Nov 2017 08:53:23 -0300</pubDate>
+      <title>Análise de Boqueirão</title>
+      <link>https://docinho.github.io/lab3---vis/post/lab3/</link>
+      <pubDate>Wed, 15 Nov 2017 15:10:45 -0300</pubDate>
       
-      <guid>https://docinho.github.io/lab3---vis/post/primeiro-post/</guid>
-      <description>&lt;p&gt;lifuahlsdu lsauf aslkfjhas lfkjhsadfl ksjhf laskjf asldkfjhsalkfj naslnbcx,mv bsfasdflkjfhsaodifap sufhas lkdjfalskdjf aslkdjfhsl dkfjasdlfkasdfiuahpsdoiuahfoisudhf9a8sd7f  tias8df87asd6fa skdjhfgksadbnf,amsndf  sdf sad fs af sad fasdf
-&lt;/p&gt;</description>
+      <guid>https://docinho.github.io/lab3---vis/post/lab3/</guid>
+      <description>       let spec = &#34;https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/07c1508929cdffd16a307253f94babf9c4fc3ffd/sd99-03.json&#34;; vegaEmbed(&#39;#vis1&#39;, spec).catch(console.warn); spec = &#34;https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/07c1508929cdffd16a307253f94babf9c4fc3ffd/sdPercentual.json&#34;; vegaEmbed(&#39;#vis2&#39;, spec).catch(console.warn); spec = &#34;https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/07c1508929cdffd16a307253f94babf9c4fc3ffd/volume15-17.json&#34;; vegaEmbed(&#39;#vis3&#39;, spec).catch(console.warn);  </description>
     </item>
     
   </channel>
