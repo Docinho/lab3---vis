@@ -18,10 +18,6 @@ Analisando os dados de volume de água do Epitácio Pessoa.
 <script src="https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc7/vega-embed.js"></script>
 <script>
     let
-        spec = "https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/f4b0fa0f0288d2cc2a3c6f8a244d8d67e093f1d2/sdPercentual.json";
-  	vegaEmbed('#vis1', spec).catch(console.warn);
-    spec = "https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/f4b0fa0f0288d2cc2a3c6f8a244d8d67e093f1d2/volume11-17.json";
-  	vegaEmbed('#vis2', spec).catch(console.warn);
     spec = "https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/f4b0fa0f0288d2cc2a3c6f8a244d8d67e093f1d2/volume-geral.json";
   	vegaEmbed('#vis3', spec).catch(console.warn);
     spec = "https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/f4b0fa0f0288d2cc2a3c6f8a244d8d67e093f1d2/sd99-03.json";
