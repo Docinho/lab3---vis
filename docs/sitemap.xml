@@ -3,34 +3,34 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/post/lab3/</loc>
+    <loc>https://docinho.github.io/lab3---vis/post/lab3/</loc>
     <lastmod>2017-11-16T13:24:44-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/archives/</loc>
+    <loc>https://docinho.github.io/lab3---vis/archives/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://docinho.github.io/lab3---vis/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
-    <lastmod>2017-11-16T13:24:44-03:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.org/post/</loc>
+    <loc>https://docinho.github.io/lab3---vis/</loc>
     <lastmod>2017-11-16T13:24:44-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://docinho.github.io/lab3---vis/post/</loc>
+    <lastmod>2017-11-16T13:24:44-03:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://docinho.github.io/lab3---vis/tags/</loc>
     <priority>0</priority>
   </url>
   

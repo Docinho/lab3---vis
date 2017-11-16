@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Compartilhando experiências com visualização</title>
-    <link>http://example.org/</link>
+    <link>https://docinho.github.io/lab3---vis/</link>
     <description>Recent content on Compartilhando experiências com visualização</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Thu, 16 Nov 2017 13:24:44 -0300</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://docinho.github.io/lab3---vis/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Analisando os dados de volume de água do Epitácio Pessoa.</title>
-      <link>http://example.org/post/lab3/</link>
+      <link>https://docinho.github.io/lab3---vis/post/lab3/</link>
       <pubDate>Thu, 16 Nov 2017 13:24:44 -0300</pubDate>
       
-      <guid>http://example.org/post/lab3/</guid>
+      <guid>https://docinho.github.io/lab3---vis/post/lab3/</guid>
       <description>&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.1/vega-lite.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc7/vega-embed.js&#34;&gt;&lt;/script&gt;
