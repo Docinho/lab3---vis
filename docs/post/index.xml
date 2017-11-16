@@ -2,22 +2,68 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Compartilhando experiências com visualização</title>
-    <link>https://docinho.github.io/lab3---vis/post/</link>
+    <link>http://example.org/post/</link>
     <description>Recent content in Posts on Compartilhando experiências com visualização</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Wed, 15 Nov 2017 15:10:45 -0300</lastBuildDate>
+    <lastBuildDate>Thu, 16 Nov 2017 13:24:44 -0300</lastBuildDate>
     
-	<atom:link href="https://docinho.github.io/lab3---vis/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://example.org/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Análise de Boqueirão</title>
-      <link>https://docinho.github.io/lab3---vis/post/lab3/</link>
-      <pubDate>Wed, 15 Nov 2017 15:10:45 -0300</pubDate>
+      <title>Analisando os dados de volume de água do Epitácio Pessoa.</title>
+      <link>http://example.org/post/lab3/</link>
+      <pubDate>Thu, 16 Nov 2017 13:24:44 -0300</pubDate>
       
-      <guid>https://docinho.github.io/lab3---vis/post/lab3/</guid>
-      <description>       let spec = &#34;https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/07c1508929cdffd16a307253f94babf9c4fc3ffd/sd99-03.json&#34;; vegaEmbed(&#39;#vis1&#39;, spec).catch(console.warn); spec = &#34;https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/07c1508929cdffd16a307253f94babf9c4fc3ffd/sdPercentual.json&#34;; vegaEmbed(&#39;#vis2&#39;, spec).catch(console.warn); spec = &#34;https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/07c1508929cdffd16a307253f94babf9c4fc3ffd/volume15-17.json&#34;; vegaEmbed(&#39;#vis3&#39;, spec).catch(console.warn);  </description>
+      <guid>http://example.org/post/lab3/</guid>
+      <description>&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.1/vega-lite.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc7/vega-embed.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;
+    let spec = &#34;https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/f4b0fa0f0288d2cc2a3c6f8a244d8d67e093f1d2/sdPercentual.json&#34;;
+    vegaEmbed(&#39;#vis1&#39;, spec).catch(console.warn);
+    let spec2 = &#34;https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/f4b0fa0f0288d2cc2a3c6f8a244d8d67e093f1d2/volume11-17.json&#34;;
+    vegaEmbed(&#39;#vis2&#39;, spec2).catch(console.warn);
+    let spec3 = &#34;https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/f4b0fa0f0288d2cc2a3c6f8a244d8d67e093f1d2/volume-geral.json&#34;;
+    vegaEmbed(&#39;#vis3&#39;, spec3).catch(console.warn);
+    let spec4 = &#34;https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/f4b0fa0f0288d2cc2a3c6f8a244d8d67e093f1d2/sd99-03.json&#34;;
+    vegaEmbed(&#39;#vis4&#39;, spec4).catch(console.warn);
+    let spec5 = &#34;https://gist.githubusercontent.com/Docinho/ffa499e8e3c4596ec41494bec53e9155/raw/f4b0fa0f0288d2cc2a3c6f8a244d8d67e093f1d2/qnt-medicoes.json&#34;;
+    vegaEmbed(&#39;#vis5&#39;, spec5).catch(console.warn);
+&lt;/script&gt;
+
+&lt;p&gt;&lt;p&gt;
+    No gráfico de linha, verificamos que a região possui períodos de chuva abundante, nos quais o reservatório enche muito. O pico em maior evidência aconteceu em 2004, um ano de muitas chuvas e que esteve e destaque como um todo, formando, por isso uma coluna no gráfico.
+&lt;/p&gt;
+&lt;p&gt;
+    Destaque-se que só é possível notar nesse gráfico períodos de cheias, nos quais a a variância é grande. Depois de 2004, por exemplo, a quantidade de água manteve-se alta, mas esse período não é expressivo nessa análise em questão.
+&lt;/p&gt;
+&lt;div id=&#34;vis1&#34; width=300&gt;&lt;/div&gt;
+&lt;p&gt;
+    Por outro lado, o gráfico de área que mostra a mediana de 2011 até esse ano, mostra que nesse período ocorreu uma queda continua da quantidade de água e reposições mínimas. Ao contrário do gráfico anterior, fica bem explícito a eminência da falta de água.
+&lt;/p&gt;
+&lt;div id=&#34;vis2&#34; width=300&gt;&lt;/div&gt;
+&lt;p&gt;
+    Sob outra perspectiva, em ambos a transposição é vista pelo seu padrão não característico do clima local, uma vez que o volume aumenta de uma forma que se diferencia da queda vista até então, como também da caracteríca contínua, percepitível no gráfico de linha da variância.
+&lt;/p&gt;
+&lt;p&gt;
+    Se continuar dessa forma, o reservatório terá, uma reserva fixa e a verificação absoluta do impacto das chuvas virá sempre acompanhado de um ruído das águas da transposição.
+&lt;/p&gt;
+&lt;div id=&#34;vis3&#34; width=300&gt;&lt;/div&gt;
+&lt;p&gt;
+    Durante essa análise, foi percebida uma dificuldade de abordagens e possibilidade de obtenção de respostas a certos questionamentos devido à característica não padronizada nem contínua dos dados. Ou seja, a coleta dos dados não possui um intervalo padrão de coleta podendo ser consideravelmente esparsos para certas abordagens.
+&lt;/p&gt;
+&lt;div id=&#34;vis5&#34; width=300&gt;&lt;/div&gt;
+&lt;p&gt;
+    Isso foi visto com um gráfico de contagem das coletas de volume. Com isso fizemos uma análise mais específica da variância no período mais contínuo encontrado que é de 1999 a 2003.
+&lt;/p&gt;
+&lt;div id=&#34;vis4&#34; width=300&gt;&lt;/div&gt;
+&lt;p&gt;
+    Estudando a variância do volume percentual e em um período mais curto é mais fácil relacionar os resultados desse gráfico com o do volume geral.
+    É notório que ocorreram muitas chuvas em 2000 e que, logo, o Epitácio Pessoa quase que dobrou de volume. Além disso, é intuitivo que em anos que chovem menos que o anterior há uma queda no volume. Dessa forma, a análise é feita a partir de dados mais &amp;ldquo;limpos&amp;rdquo; facilitando inferências corretas, também pela caracterítica do periodo já mencionada.
+&lt;/p&gt;
+&lt;/p&gt;</description>
     </item>
     
   </channel>
