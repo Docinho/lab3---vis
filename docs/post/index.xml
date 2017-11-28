@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Compartilhando experiências com visualização</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
-    <lastBuildDate>Thu, 16 Nov 2017 13:24:44 -0300</lastBuildDate>
+    <lastBuildDate>Tue, 28 Nov 2017 10:09:17 -0300</lastBuildDate>
     
 	<atom:link href="https://docinho.github.io/lab3---vis/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>LabD3</title>
+      <link>https://docinho.github.io/lab3---vis/post/labd3/</link>
+      <pubDate>Tue, 28 Nov 2017 10:09:17 -0300</pubDate>
+      
+      <guid>https://docinho.github.io/lab3---vis/post/labd3/</guid>
+      <description>const alturaSVG = 400, larguraSVG = 900; const margin = {top: 10, right: 20, bottom:30, left: 45}, larguraVis = larguraSVG - margin.left - margin.right, alturaVis = alturaSVG - margin.top - margin.bottom; function desenhaVis(dados) { /* * Prepara onde adicionaremos a visualizacao */ let grafico = d3.select(&#39;#chart&#39;) .append(&#39;svg&#39;) .attr(&#39;width&#39;, larguraVis + margin.left + margin.right) .attr(&#39;height&#39;, alturaVis + margin.top + margin.bottom) .append(&#39;g&#39;) .attr(&#39;transform&#39;, &#39;translate(&#39; + margin.left + &#39;,&#39; + margin.top + &#39;)&#39;); /* * As escalas */ let x = d3.</description>
+    </item>
     
     <item>
       <title>Analisando os dados de volume de água do Epitácio Pessoa.</title>
