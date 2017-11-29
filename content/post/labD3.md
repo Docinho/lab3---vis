@@ -4,7 +4,7 @@ date: 2017-11-28T10:09:17-03:00
 draft: false
 ---
 
-Em azul nós temos os meses com chuvas acima de 80mm a maior parte da precipitação. Eles são Abril, Maio, Junho e Julho.
+Em azul nós temos os meses com chuvas acima de 80mm a maior parte da precipitação. Eles estão representads de azul e são Abril, Maio, Junho e Julho.
 <!--more-->
 <script src="https://d3js.org/d3.v4.min.js"></script>
 
