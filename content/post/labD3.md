@@ -1,5 +1,5 @@
 ---
-title: "LabD3"
+title: "Visualização Pluviométrica de Boqueirão"
 date: 2017-11-28T10:09:17-03:00
 draft: false
 ---
@@ -8,8 +8,8 @@ draft: false
 
 
 <script type="text/javascript">
-    const alturaSVG = 400, larguraSVG = 900;
-    const margin = {top: 10, right: 20, bottom:30, left: 45},
+    const alturaSVG = 450, larguraSVG = 900;
+    const margin = {top: 10, right: 20, bottom:50, left: 45},
     larguraVis = larguraSVG - margin.left - margin.right,
     alturaVis = alturaSVG - margin.top - margin.bottom;
           
@@ -48,6 +48,7 @@ draft: false
                   .attr('cy', d => y(d.dez_percentil))
                   .attr('cx', d => x(d.noventa_percentil))
                   .attr('r', 10)
+                  .attr('fill', d => {if(d.mediana > 80) {return "blue";}else{return "red";}})
 
        /*
        * Os eixos
@@ -64,7 +65,7 @@ draft: false
             .attr("transform", "translate(-30," + (alturaVis + margin.top)/2 + ") rotate(-90)")
             .text("10-percentil");
         grafico.append("text")
-            .attr("transform", "translate(" + ((larguraVis + margin.right + margin.left)/2) + "," + (alturaVis + 20) + " )")
+            .attr("transform", "translate(" + ((larguraVis + margin.right)/2) + "," + (alturaVis +35) + " )")
             .text("90-percentil");
         
         
