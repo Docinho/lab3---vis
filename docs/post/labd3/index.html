@@ -20,7 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.30.2 with theme Tranquilpeak 0.4.3-BETA">
-    <title>LabD3</title>
+    <title>Visualização Pluviométrica de Boqueirão</title>
     <meta name="author" content="Livia Cavalcanti">
     <meta name="keywords" content="">
 
@@ -28,15 +28,15 @@
     
 
     
-    <meta name="description" content="const alturaSVG = 400, larguraSVG = 900; const margin = {top: 10, right: 20, bottom:30, left: 45}, larguraVis = larguraSVG - margin.left - margin.right, alturaVis = alturaSVG - margin.top - margin.bottom; function desenhaVis(dados) { /* * Prepara onde adicionaremos a visualizacao */ let grafico = d3.select(&#39;#chart&#39;) .append(&#39;svg&#39;) .attr(&#39;width&#39;, larguraVis &#43; margin.left &#43; margin.right) .attr(&#39;height&#39;, alturaVis &#43; margin.top &#43; margin.bottom) .append(&#39;g&#39;) .attr(&#39;transform&#39;, &#39;translate(&#39; &#43; margin.left &#43; &#39;,&#39; &#43; margin.top &#43; &#39;)&#39;); /* * As escalas */ let x = d3.">
-    <meta property="og:description" content="const alturaSVG = 400, larguraSVG = 900; const margin = {top: 10, right: 20, bottom:30, left: 45}, larguraVis = larguraSVG - margin.left - margin.right, alturaVis = alturaSVG - margin.top - margin.bottom; function desenhaVis(dados) { /* * Prepara onde adicionaremos a visualizacao */ let grafico = d3.select(&#39;#chart&#39;) .append(&#39;svg&#39;) .attr(&#39;width&#39;, larguraVis &#43; margin.left &#43; margin.right) .attr(&#39;height&#39;, alturaVis &#43; margin.top &#43; margin.bottom) .append(&#39;g&#39;) .attr(&#39;transform&#39;, &#39;translate(&#39; &#43; margin.left &#43; &#39;,&#39; &#43; margin.top &#43; &#39;)&#39;); /* * As escalas */ let x = d3.">
+    <meta name="description" content="">
+    <meta property="og:description" content="">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="LabD3">
+    <meta property="og:title" content="Visualização Pluviométrica de Boqueirão">
     <meta property="og:url" content="/post/labd3/">
     <meta property="og:site_name" content="Compartilhando experiências com visualização">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Compartilhando experiências com visualização">
-    <meta name="twitter:description" content="const alturaSVG = 400, larguraSVG = 900; const margin = {top: 10, right: 20, bottom:30, left: 45}, larguraVis = larguraSVG - margin.left - margin.right, alturaVis = alturaSVG - margin.top - margin.bottom; function desenhaVis(dados) { /* * Prepara onde adicionaremos a visualizacao */ let grafico = d3.select(&#39;#chart&#39;) .append(&#39;svg&#39;) .attr(&#39;width&#39;, larguraVis &#43; margin.left &#43; margin.right) .attr(&#39;height&#39;, alturaVis &#43; margin.top &#43; margin.bottom) .append(&#39;g&#39;) .attr(&#39;transform&#39;, &#39;translate(&#39; &#43; margin.left &#43; &#39;,&#39; &#43; margin.top &#43; &#39;)&#39;); /* * As escalas */ let x = d3.">
+    <meta name="twitter:description" content="">
     
     
 
@@ -211,7 +211,7 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      LabD3
+      Visualização Pluviométrica de Boqueirão
     </h1>
   
   
@@ -230,11 +230,12 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <script src="https://d3js.org/d3.v4.min.js"></script>
+              <p>
+<script src="https://d3js.org/d3.v4.min.js"></script></p>
 
 <script type="text/javascript">
-    const alturaSVG = 400, larguraSVG = 900;
-    const margin = {top: 10, right: 20, bottom:30, left: 45},
+    const alturaSVG = 450, larguraSVG = 900;
+    const margin = {top: 10, right: 20, bottom:50, left: 45},
     larguraVis = larguraSVG - margin.left - margin.right,
     alturaVis = alturaSVG - margin.top - margin.bottom;
           
@@ -273,6 +274,7 @@
                   .attr('cy', d => y(d.dez_percentil))
                   .attr('cx', d => x(d.noventa_percentil))
                   .attr('r', 10)
+                  .attr('fill', d => {if(d.mediana > 80) {return "blue";}else{return "red";}})
 
        /*
        * Os eixos
@@ -289,7 +291,7 @@
             .attr("transform", "translate(-30," + (alturaVis + margin.top)/2 + ") rotate(-90)")
             .text("10-percentil");
         grafico.append("text")
-            .attr("transform", "translate(" + ((larguraVis + margin.right + margin.left)/2) + "," + (alturaVis + 20) + " )")
+            .attr("transform", "translate(" + ((larguraVis + margin.right)/2) + "," + (alturaVis +35) + " )")
             .text("90-percentil");
         
         
@@ -303,7 +305,6 @@
 <div id = "chart">
 
 </div>
-
               
             </div>
           </div>
@@ -546,14 +547,14 @@
             
             <div class="media-body">
               <a class="link-unstyled" href="https://docinho.github.io/lab3---vis/post/labd3/">
-                <h3 class="media-heading">LabD3</h3>
+                <h3 class="media-heading">Visualização Pluviométrica de Boqueirão</h3>
               </a>
               <span class="media-meta">
                 <span class="media-date text-small">
                   Nov 11, 2017
                 </span>
               </span>
-              <div class="media-content hide-xs font-merryweather">const alturaSVG = 400, larguraSVG = 900; const margin = {top: 10, right: 20, bottom:30, left: 45}, larguraVis = larguraSVG - margin.left - margin.right, alturaVis = alturaSVG - margin.top - margin.bottom; function desenhaVis(dados) { /* * Prepara onde adicionaremos a visualizacao */ let grafico = d3.select('#chart') .append('svg') .attr('width', larguraVis + margin.left + margin.right) .attr('height', alturaVis + margin.top + margin.bottom) .append('g') .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')'); /* * As escalas */ let x = d3.</div>
+              <div class="media-content hide-xs font-merryweather"></div>
             </div>
             <div style="clear:both;"></div>
             <hr>
