@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+
+<style>
+svg {
+margin-right: 2px;
+margin-left: 2px;
+}
+</style>
+</head>
+<body>
+
+
+<script>
+var width = 50,
+    height = 50;
+
+var drag = d3.behavior.drag()
+    .origin(function(d) { return d; });
+
+var svg = d3.select("body").append("div").selectAll("svg")
+    .data(d3.range(596).map(function() { return {x: width / 2, y: height / 2}; }))
+  .enter().append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+
+  svg.append('svg:image')
+  .attr({
+    'xlink:href': 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Aiga_bus_on_green_circle.svg/2000px-Aiga_bus_on_green_circle.svg.png',  // can also add svg file here
+    x: 5,
+    y: 5,
+    width: 40,
+    height: 40})
+    .attr("align", "center");
+
+</script>
+</body>
+</html>
