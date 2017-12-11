@@ -33,12 +33,11 @@ Em azul nÃ³s temos os meses com chuvas acima de 80mm a maior parte da precipitaÃ
        */
         let x = d3.scaleLinear() 
                 .domain([0, d3.max(dados, (d) => d.noventa_percentil)])
-                .range([0,larguraVis]);
+                .range([0,larguraVis/2]);
         let y = d3.scaleLinear() 
                  .domain([0, d3.max(dados, (d, i) => d.dez_percentil)])
                  .range([0, alturaVis])
                  .rangeRound([alturaVis, 0]);
-        console.log(x(100),y(100));
          /*
        * As marcas
        */
