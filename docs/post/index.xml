@@ -7,7 +7,9 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>pt-br</language>
     <lastBuildDate>Tue, 28 Nov 2017 10:09:17 -0300</lastBuildDate>
-    <atom:link href="https://docinho.github.io/lab3---vis/post/index.xml" rel="self" type="application/rss+xml" />
+    
+	<atom:link href="https://docinho.github.io/lab3---vis/post/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>E ai? Vamo lá no acude?</title>
@@ -15,129 +17,28 @@
       <pubDate>Tue, 28 Nov 2017 10:09:17 -0300</pubDate>
       
       <guid>https://docinho.github.io/lab3---vis/post/acude/</guid>
-      <description>&lt;p&gt;O Açude Velho é um dos cartões portais mais importantes da cidade de Campina Grande, recebendo muita atenção dos visitantes e dos moradores. Agora ele irá receber um olhar mais especial, com os dados coletados por profissionais de urbanismo, vamos olhar algumas características da circulação de transeuntes e veículos no lugar.&lt;/p&gt;
-
-&lt;p&gt;Localizado num ponto central da cidade, o Açude possui um fluxo intenso de veículos motorizados, sendo os carros os mais presentes.
-&lt;script src=&#34;http://d3js.org/d3.v3.min.js&#34;&gt;&lt;/script&gt;
-&lt;script scr = &#34;lab3---vis/post/static/radial-veiculos.html&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;De forma, talvez surpreendente, é possível notar no gráfico acima que há uma circulação considerável de ônibus nas regiões que foram assistidas. Eles representam uma frota diária de 596 veículos.
-&lt;script src=&#34;http://d3js.org/d3.v3.min.js&#34;&gt;&lt;/script&gt;
-&lt;script scr = &#34;lab3---vis/post/static/tabela-geral.html&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;O que é apenas um por cento do total de carros contabilizados. Todavia, considerando que cada carro tem, em média, duas pessoas, seriam necessários, apenas, 164 ônibus para transportá-las.
-&lt;script src=&#34;http://d3js.org/d3.v3.min.js&#34;&gt;&lt;/script&gt;
-&lt;script scr = &#34;lab3---vis/post/static/tabela-veiculos.html&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Ou seja, dez por cento do total de ônibus são suficientes para evitar que mais de 56.000 carros circulem naquela região. O que nos faz levantar outras hipóteses para o não uso do transporte público pelos campinenses, como preço da tarifa e atrasos dos carros e, consequente, superlotação.&lt;/p&gt;
-
-&lt;p&gt;Para além disso, o Açude Velho é visto como um lugar de recreação e de prática de atividade física. Pelo senso comum, as mulheres são mais vaidosas, mas elas não são as maiores frequentadoras do local, havendo uma lacuna maior da sua frequência nos horários de fim de manhã e começo da tarde. De fato, período não recomendado para a prática de atividade física.
-A despeito disso, o horário noturno também é pouco frequentado, fato que pode ser devido, tendo em vista os números de criminalidade no município, em virtude do perigo de transitar a pé, muitas vezes, sem policiamento.
-&lt;script src=&#34;http://d3js.org/d3.v3.min.js&#34;&gt;&lt;/script&gt;
-&lt;script scr = &#34;lab3---vis/post/static/fear-line.html&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-</description>
+      <description>&lt;p&gt;O Açude Velho é um dos cartões portais mais importantes da cidade de Campina Grande, recebendo muita atenção dos visitantes e dos moradores. Agora ele irá receber um olhar mais especial, com os dados coletados por profissionais de urbanismo, vamos olhar algumas características da circulação de transeuntes e veículos no lugar.
+&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Visualização Pluviométrica de Boqueirão</title>
-      <link>https://docinho.github.io/lab3---vis/post/labD3/</link>
+      <link>https://docinho.github.io/lab3---vis/post/labd3/</link>
       <pubDate>Tue, 28 Nov 2017 10:09:17 -0300</pubDate>
       
-      <guid>https://docinho.github.io/lab3---vis/post/labD3/</guid>
-      <description>&lt;p&gt;Em azul nós temos os meses com chuvas acima de 80mm a maior parte da precipitação. Eles estão representads de azul e são Abril, Maio, Junho e Julho.&lt;/p&gt;
+      <guid>https://docinho.github.io/lab3---vis/post/labd3/</guid>
+      <description>&lt;p&gt;Em azul nós temos os meses com chuvas acima de 80mm a maior parte da precipitação. Eles estão representads de azul e são Abril, Maio, Junho e Julho.
 
-&lt;script src=&#34;https://d3js.org/d3.v4.min.js&#34;&gt;&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-    const alturaSVG = 450, larguraSVG = 900;
-    const margin = {top: 10, right: 20, bottom:50, left: 45},
-    larguraVis = larguraSVG - margin.left - margin.right,
-    alturaVis = alturaSVG - margin.top - margin.bottom;
-          
-    
-
-    function desenhaVis(dados) {
-        /*
-       * Prepara onde adicionaremos a visualizacao
-       */
-       let grafico = d3.select(&#39;#chart&#39;) 
-            .append(&#39;svg&#39;)
-            .attr(&#39;width&#39;, larguraVis + margin.left + margin.right)
-            .attr(&#39;height&#39;, alturaVis + margin.top + margin.bottom)
-            .append(&#39;g&#39;) 
-            .attr(&#39;transform&#39;, &#39;translate(&#39; +  margin.left + &#39;,&#39; + margin.top + &#39;)&#39;);
-
-       /*
-       * As escalas
-       */
-        let x = d3.scaleLinear() 
-                .domain([0, d3.max(dados, (d) =&gt; d.noventa_percentil)])
-                .range([0,larguraVis]);
-        let y = d3.scaleLinear() 
-                 .domain([0, d3.max(dados, (d, i) =&gt; d.dez_percentil)])
-                 .range([0, alturaVis])
-                 .rangeRound([alturaVis, 0]);
-        console.log(x(100),y(100));
-         /*
-       * As marcas
-       */
-      grafico.selectAll(&#39;g&#39;)
-              .data(dados)
-              .enter()
-                .append(&#39;circle&#39;)
-                     // usando a escala definida acima
-                  .attr(&#39;cy&#39;, d =&gt; y(d.dez_percentil))
-                  .attr(&#39;cx&#39;, d =&gt; x(d.noventa_percentil))
-                  .attr(&#39;r&#39;, 10)
-                  .attr(&#39;fill&#39;, d =&gt; {if(d.mediana &gt; 80) {return &#34;blue&#34;;}else{return &#34;red&#34;;}})
-
-       /*
-       * Os eixos
-       */
-       grafico.append(&#34;g&#34;)
-            .attr(&#34;class&#34;, &#34;x axis&#34;)
-            .attr(&#34;transform&#34;, &#34;translate(0,&#34; + alturaVis + &#34;)&#34;)
-            .call(d3.axisBottom(x)); 
-        grafico.append(&#39;g&#39;)
-            .attr(&#39;transform&#39;, &#39;translate(0,0)&#39;)
-            .call(d3.axisLeft(y))  
-
-        grafico.append(&#34;text&#34;)
-            .attr(&#34;transform&#34;, &#34;translate(-30,&#34; + (alturaVis + margin.top)/2 + &#34;) rotate(-90)&#34;)
-            .text(&#34;10-percentil&#34;);
-        grafico.append(&#34;text&#34;)
-            .attr(&#34;transform&#34;, &#34;translate(&#34; + ((larguraVis + margin.right)/2) + &#34;,&#34; + (alturaVis +35) + &#34; )&#34;)
-            .text(&#34;90-percentil&#34;);
-        
-        
-    }
-
-    d3.json(&#39;/lab3---vis/post/static/boqueirao-por-mes.json&#39;, function(dados) {
-        desenhaVis(dados);
-        });
-&lt;/script&gt;
-
-&lt;div id = &#34;chart&#34;&gt;
-
-&lt;/div&gt;
-</description>
+&lt;script src=&#34;https://d3js.org/d3.v4.min.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title></title>
+      <title>Analisando os dados de volume de água do Epitácio Pessoa.</title>
       <link>https://docinho.github.io/lab3---vis/post/lab3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Thu, 16 Nov 2017 13:24:44 -0300</pubDate>
       
       <guid>https://docinho.github.io/lab3---vis/post/lab3/</guid>
-      <description>
-
-&lt;p&gt;﻿&amp;mdash;
-title: &amp;ldquo;Analisando os dados de volume de água do Epitácio Pessoa.&amp;rdquo;
-date: 2017-11-16T13:24:44-03:00&lt;/p&gt;
-
-&lt;h2 id=&#34;draft-false:ec0df491ed49a6ad6d6ec390f713758f&#34;&gt;draft: false&lt;/h2&gt;
-
-&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js&#34;&gt;&lt;/script&gt;
+      <description>&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/vega/3.0.7/vega.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/vega-lite/2.0.1/vega-lite.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/vega-embed/3.0.0-rc7/vega-embed.js&#34;&gt;&lt;/script&gt;
 &lt;script&gt;
@@ -153,7 +54,7 @@ date: 2017-11-16T13:24:44-03:00&lt;/p&gt;
     vegaEmbed(&#39;#vis5&#39;, spec5).catch(console.warn);
 &lt;/script&gt;
 
-&lt;p&gt;
+&lt;p&gt;&lt;p&gt;
     No gráfico de linha, verificamos que a região possui períodos de chuva abundante, nos quais o reservatório enche muito. O pico em maior evidência aconteceu em 2004, um ano de muitas chuvas e que esteve e destaque como um todo, formando, por isso uma coluna no gráfico.
 &lt;/p&gt;
 &lt;p&gt;
@@ -176,310 +77,14 @@ date: 2017-11-16T13:24:44-03:00&lt;/p&gt;
 &lt;/p&gt;
 &lt;div id=&#34;vis5&#34; width=300&gt;&lt;/div&gt;
 &lt;p&gt;
-    Isso foi visto com um gráfico de contagem das coletas de volume. Com isso fizemos uma análise mais específica da variância no período mais contínuo encontrado que é de 1999 a 2003. 
+    Isso foi visto com um gráfico de contagem das coletas de volume. Com isso fizemos uma análise mais específica da variância no período mais contínuo encontrado que é de 1999 a 2003.
 &lt;/p&gt;
 &lt;div id=&#34;vis4&#34; width=300&gt;&lt;/div&gt;
 &lt;p&gt;
     Estudando a variância do volume percentual e em um período mais curto é mais fácil relacionar os resultados desse gráfico com o do volume geral.
-    É notório que ocorreram muitas chuvas em 2000 e que, logo, o Epitácio Pessoa quase que dobrou de volume. Além disso, é intuitivo que em anos que chovem menos que o anterior há uma queda no volume. Dessa forma, a análise é feita a partir de dados mais &#34;limpos&#34; facilitando inferências corretas, também pela caracterítica do periodo já mencionada.
+    É notório que ocorreram muitas chuvas em 2000 e que, logo, o Epitácio Pessoa quase que dobrou de volume. Além disso, é intuitivo que em anos que chovem menos que o anterior há uma queda no volume. Dessa forma, a análise é feita a partir de dados mais &amp;ldquo;limpos&amp;rdquo; facilitando inferências corretas, também pela caracterítica do periodo já mencionada.
 &lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://docinho.github.io/lab3---vis/post/static/fear-line/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docinho.github.io/lab3---vis/post/static/fear-line/</guid>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;meta charset=&#34;utf-8&#34;&gt;
-&lt;style&gt; /* set the CSS */
-
-&lt;/style&gt;
-&lt;body&gt;
-&lt;svg width=&#34;960&#34; height=&#34;500&#34;&gt;&lt;/svg&gt;
-&lt;!-- load the d3.js library --&gt;
-&lt;script src=&#34;https://d3js.org/d3.v4.min.js&#34;&gt;&lt;/script&gt;
-&lt;script&gt;
-
-  var svg = d3.select(&#34;svg&#34;),
-    margin = {top: 20, right: 20, bottom: 30, left: 50},
-    width = +svg.attr(&#34;width&#34;) - margin.left - margin.right,
-    height = +svg.attr(&#34;height&#34;) - margin.top - margin.bottom,
-    g = svg.append(&#34;g&#34;).attr(&#34;transform&#34;, &#34;translate(&#34; + margin.left + &#34;,&#34; + margin.top + &#34;)&#34;);
-
-var hora = [&#34;06:00&#34;,&#34;06:15&#34;,&#34;06:30&#34;,&#34;06:45&#34;,&#34;07:00&#34;,&#34;07:15&#34;,&#34;07:30&#34;,&#34;07:45&#34;,&#34;08:00&#34;,&#34;08:15&#34;,&#34;08:30&#34;,&#34;08:45&#34;,&#34;09:00&#34;,&#34;09:15&#34;,&#34;09:30&#34;,&#34;09:45&#34;,&#34;10:00&#34;,&#34;10:15&#34;,&#34;10:30&#34;,&#34;10:45&#34;,&#34;11:00&#34;,&#34;11:15&#34;,&#34;11:30&#34;,&#34;11:45&#34;]
-var parseTime = d3.timeParse(&#34;%H:%M&#34;);
-var x = d3.scaleTime()
-    .rangeRound([0, width]);
-
-var y = d3.scaleLinear()
-    .rangeRound([height, 0]);
-
-var escala = d3.scaleLinear()
-                .domain([0,120])
-                .range([&#34;white&#34;, &#34;black&#34;])
-                .clamp(true);
-
-var area = d3.area()
-    .x(function(d) { return x(d.date); })
-    .y1(function(d) { return y(d.close); });
-
-d3.csv(&#34;data3.csv&#34;, function(d) {
-  d.date = parseTime(d.date);
-  d.close = +d.close;
-  return d;
-}, function(error, data) {
-  if (error) throw error;
-
-  x.domain(d3.extent(data, function(d) { return d.date; }));
-  y.domain([0, d3.max(data, function(d) { return d.close; })]);
-  area.y0(y(0));
-
-  g.append(&#34;path&#34;)
-      .datum(data)
-      .attr(&#34;fill&#34;, escala(data.close))
-      .attr(&#34;d&#34;, area);
-
-  g.append(&#34;g&#34;)
-      .attr(&#34;transform&#34;, &#34;translate(0,&#34; + height + &#34;)&#34;)
-      .call(d3.axisBottom(x));
-
-  g.append(&#34;g&#34;)
-      .call(d3.axisLeft(y));
-});
-&lt;/script&gt;
-&lt;/body&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://docinho.github.io/lab3---vis/post/static/radial-veiculos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docinho.github.io/lab3---vis/post/static/radial-veiculos/</guid>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;meta charset=&#34;utf-8&#34;&gt;
-&lt;svg width=&#34;960&#34; height=&#34;960&#34; font-family=&#34;sans-serif&#34; font-size=&#34;10&#34;&gt;&lt;/svg&gt;
-&lt;script src=&#34;https://d3js.org/d3.v4.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;d3-scale-radial.js&#34;&gt;&lt;/script&gt;
-&lt;script&gt;
-
-var svg = d3.select(&#34;svg&#34;),
-    width = +svg.attr(&#34;width&#34;),
-    height = +svg.attr(&#34;height&#34;),
-    innerRadius = 180,
-    outerRadius = Math.min(width, height) / 2,
-    g = svg.append(&#34;g&#34;).attr(&#34;transform&#34;, &#34;translate(&#34; + width / 2 + &#34;,&#34; + height / 2 + &#34;)&#34;);
-
-var x = d3.scaleBand()
-    .range([0, 2 * Math.PI])
-    .align(0);
-
-var y = d3.scaleRadial()
-    .range([innerRadius, outerRadius]);
-
-var z = d3.scaleOrdinal()
-    .range([&#34;#7b6888&#34;, &#34;#6b486b&#34;, &#34;#a05d56&#34;, &#34;#d0743c&#34;, &#34;#ff8c00&#34;]);
-
-d3.csv(&#34;data2.csv&#34;, function(d, i, columns) {
-  for (i = 1, t = 0; i &lt; columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
-  d.total = t;
-  return d;
-}, function(error, data) {
-  if (error) throw error;
-
-  x.domain(data.map(function(d) { return d.horarioInicial; }));
-  y.domain([0, d3.max(data, function(d) { return d.total; })]);
-  z.domain(data.columns.slice(1));
-
-  g.append(&#34;g&#34;)
-    .selectAll(&#34;g&#34;)
-    .data(d3.stack().keys(data.columns.slice(1))(data))
-    .enter().append(&#34;g&#34;)
-      .attr(&#34;fill&#34;, function(d) { return z(d.key); })
-    .selectAll(&#34;path&#34;)
-    .data(function(d) { return d; })
-    .enter().append(&#34;path&#34;)
-      .attr(&#34;d&#34;, d3.arc()
-          .innerRadius(function(d) { return y(d[0]); })
-          .outerRadius(function(d) { return y(d[1]); })
-          .startAngle(function(d) { return x(d.data.horarioInicial); })
-          .endAngle(function(d) { return x(d.data.horarioInicial) + x.bandwidth(); })
-          .padAngle(0.01)
-          .padRadius(innerRadius));
-
-  var label = g.append(&#34;g&#34;)
-    .selectAll(&#34;g&#34;)
-    .data(data)
-    .enter().append(&#34;g&#34;)
-      .attr(&#34;text-anchor&#34;, &#34;middle&#34;)
-      .attr(&#34;transform&#34;, function(d) { return &#34;rotate(&#34; + ((x(d.horarioInicial) + x.bandwidth() / 2) * 180 / Math.PI - 90) + &#34;)translate(&#34; + innerRadius + &#34;,0)&#34;; });
-
-  label.append(&#34;line&#34;)
-      .attr(&#34;x2&#34;, -5)
-      .attr(&#34;stroke&#34;, &#34;#000&#34;);
-
-  label.append(&#34;text&#34;)
-      .attr(&#34;transform&#34;, function(d) { return (x(d.horarioInicial) + x.bandwidth() / 2 + Math.PI / 2) % (2 * Math.PI) &lt; Math.PI ? &#34;rotate(90)translate(0,16)&#34; : &#34;rotate(-90)translate(0,-9)&#34;; })
-      .text(function(d) { return d.horarioInicial; });
-
-  var yAxis = g.append(&#34;g&#34;)
-      .attr(&#34;text-anchor&#34;, &#34;middle&#34;);
-
-  var yTick = yAxis
-    .selectAll(&#34;g&#34;)
-    .data(y.ticks(5).slice(1))
-    .enter().append(&#34;g&#34;);
-
-  yTick.append(&#34;circle&#34;)
-      .attr(&#34;fill&#34;, &#34;none&#34;)
-      .attr(&#34;stroke&#34;, &#34;#000&#34;)
-      .attr(&#34;r&#34;, y);
-
-  yTick.append(&#34;text&#34;)
-      .attr(&#34;y&#34;, function(d) { return -y(d); })
-      .attr(&#34;dy&#34;, &#34;0.35em&#34;)
-      .attr(&#34;fill&#34;, &#34;none&#34;)
-      .attr(&#34;stroke&#34;, &#34;#fff&#34;)
-      .attr(&#34;stroke-width&#34;, 5)
-      .text(y.tickFormat(5, &#34;s&#34;));
-
-  yTick.append(&#34;text&#34;)
-      .attr(&#34;y&#34;, function(d) { return -y(d); })
-      .attr(&#34;dy&#34;, &#34;0.35em&#34;)
-      .text(y.tickFormat(5, &#34;s&#34;));
-
-  yAxis.append(&#34;text&#34;)
-      .attr(&#34;y&#34;, function(d) { return -y(y.ticks(5).pop()); })
-      .attr(&#34;dy&#34;, &#34;-1em&#34;)
-      .text(&#34;Population&#34;);
-
-  var legend = g.append(&#34;g&#34;)
-    .selectAll(&#34;g&#34;)
-    .data(data.columns.slice(1).reverse())
-    .enter().append(&#34;g&#34;)
-      .attr(&#34;transform&#34;, function(d, i) { return &#34;translate(-40,&#34; + (i - (data.columns.length - 1) / 2) * 20 + &#34;)&#34;; });
-
-  legend.append(&#34;rect&#34;)
-      .attr(&#34;width&#34;, 18)
-      .attr(&#34;height&#34;, 18)
-      .attr(&#34;fill&#34;, z);
-
-  legend.append(&#34;text&#34;)
-      .attr(&#34;x&#34;, 24)
-      .attr(&#34;y&#34;, 9)
-      .attr(&#34;dy&#34;, &#34;0.35em&#34;)
-      .text(function(d) { return d; });
-});
-
-&lt;/script&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://docinho.github.io/lab3---vis/post/static/tabela-carros/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docinho.github.io/lab3---vis/post/static/tabela-carros/</guid>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;script src=&#34;http://d3js.org/d3.v3.min.js&#34;&gt;&lt;/script&gt;
-  &lt;meta charset=&#34;utf-8&#34;&gt;
-  &lt;title&gt;JS Bin&lt;/title&gt;
-
-&lt;style&gt;
-svg {
-margin-right: 2px;
-margin-left: 2px;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-
-&lt;script&gt;
-var width = 50,
-    height = 50;
-
-var drag = d3.behavior.drag()
-    .origin(function(d) { return d; });
-
-var svg = d3.select(&#34;body&#34;).append(&#34;div&#34;).selectAll(&#34;svg&#34;)
-    .data(d3.range(596).map(function() { return {x: width / 2, y: height / 2}; }))
-  .enter().append(&#34;svg&#34;)
-    .attr(&#34;width&#34;, width)
-    .attr(&#34;height&#34;, height);
-
-
-  svg.append(&#39;svg:image&#39;)
-  .attr({
-    &#39;xlink:href&#39;: &#39;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Aiga_bus_on_green_circle.svg/2000px-Aiga_bus_on_green_circle.svg.png&#39;,  // can also add svg file here
-    x: 5,
-    y: 5,
-    width: 40,
-    height: 40})
-    .attr(&#34;align&#34;, &#34;center&#34;);
-
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://docinho.github.io/lab3---vis/post/static/tabela-geral/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docinho.github.io/lab3---vis/post/static/tabela-geral/</guid>
-      <description>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-&lt;script src=&#34;http://d3js.org/d3.v3.min.js&#34;&gt;&lt;/script&gt;
-  &lt;meta charset=&#34;utf-8&#34;&gt;
-  &lt;title&gt;JS Bin&lt;/title&gt;
-
-&lt;style&gt;
-svg {
-margin-right: 2px;
-margin-left: 2px;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-
-&lt;script&gt;
-var width = 50,
-    height = 50;
-
-var drag = d3.behavior.drag()
-    .origin(function(d) { return d; });
-
-var svg = d3.select(&#34;body&#34;).append(&#34;div&#34;).selectAll(&#34;svg&#34;)
-    .data(d3.range(164).map(function() { return {x: width / 2, y: height / 2}; }))
-  .enter().append(&#34;svg&#34;)
-    .attr(&#34;width&#34;, width)
-    .attr(&#34;height&#34;, height);
-
-svg.append(&#39;svg:image&#39;)
-.attr({
-  &#39;xlink:href&#39;: &#39;https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Victoria_bus_logo.svg/1023px-Victoria_bus_logo.svg.png&#39;,  // can also add svg file here
-  x: 5,
-  y: 5,
-  width: 40,
-  height: 40})
-  .attr(&#34;align&#34;, &#34;center&#34;);
-
-&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</description>
+&lt;/p&gt;</description>
     </item>
     
   </channel>
