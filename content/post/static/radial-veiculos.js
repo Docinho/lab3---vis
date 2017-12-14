@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<svg width="960" height="960" font-family="sans-serif" font-size="10"></svg>
-<script src="https://d3js.org/d3.v4.min.js"></script>
-<script src="d3-scale-radial.js"></script>
-<script>
-
 var svg = d3.select("svg"),
     width = +svg.attr("width"),
     height = +svg.attr("height"),
@@ -112,5 +105,3 @@ d3.csv("data2.csv", function(d, i, columns) {
       .attr("dy", "0.35em")
       .text(function(d) { return d; });
 });
-
-</script>
