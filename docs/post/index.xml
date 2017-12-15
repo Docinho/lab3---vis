@@ -12,12 +12,24 @@
     
     
     <item>
+      <title>E ai? Vamo lá no acude?</title>
+      <link>https://docinho.github.io/lab3---vis/post/acude/</link>
+      <pubDate>Tue, 28 Nov 2017 10:09:17 -0300</pubDate>
+      
+      <guid>https://docinho.github.io/lab3---vis/post/acude/</guid>
+      <description>&lt;p&gt;O Açude Velho é um dos cartões portais mais importantes da cidade de Campina Grande, recebendo muita atenção dos visitantes e dos moradores. Agora ele irá receber um olhar mais especial, com os dados coletados por profissionais de urbanismo, vamos olhar algumas características da circulação de transeuntes e veículos no lugar.
+&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Visualização Pluviométrica de Boqueirão</title>
       <link>https://docinho.github.io/lab3---vis/post/labd3/</link>
       <pubDate>Tue, 28 Nov 2017 10:09:17 -0300</pubDate>
       
       <guid>https://docinho.github.io/lab3---vis/post/labd3/</guid>
-      <description></description>
+      <description>&lt;p&gt;Em azul nós temos os meses com chuvas acima de 80mm a maior parte da precipitação. Eles estão representads de azul e são Abril, Maio, Junho e Julho.
+
+&lt;script src=&#34;https://d3js.org/d3.v4.min.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
