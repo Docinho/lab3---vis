@@ -87,41 +87,5 @@
 &lt;/p&gt;</description>
     </item>
     
-    <item>
-      <title></title>
-      <link>https://docinho.github.io/lab3---vis/post/static/fear-line/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docinho.github.io/lab3---vis/post/static/fear-line/</guid>
-      <description>/* set the CSS */var svg = d3.select(&#34;svg&#34;),margin = {top: 20, right: 20, bottom: 30, left: 50},width = +svg.attr(&#34;width&#34;) - margin.left - margin.right,height = +svg.attr(&#34;height&#34;) - margin.top - margin.bottom,g = svg.append(&#34;g&#34;).attr(&#34;transform&#34;, &#34;translate(&#34; + margin.left + &#34;,&#34; + margin.top + &#34;)&#34;);var hora = [&#34;06:00&#34;,&#34;06:15&#34;,&#34;06:30&#34;,&#34;06:45&#34;,&#34;07:00&#34;,&#34;07:15&#34;,&#34;07:30&#34;,&#34;07:45&#34;,&#34;08:00&#34;,&#34;08:15&#34;,&#34;08:30&#34;,&#34;08:45&#34;,&#34;09:00&#34;,&#34;09:15&#34;,&#34;09:30&#34;,&#34;09:45&#34;,&#34;10:00&#34;,&#34;10:15&#34;,&#34;10:30&#34;,&#34;10:45&#34;,&#34;11:00&#34;,&#34;11:15&#34;,&#34;11:30&#34;,&#34;11:45&#34;]var parseTime = d3.timeParse(&#34;%H:%M&#34;);var x = d3.scaleTime().rangeRound([0, width]);var y = d3.scaleLinear().rangeRound([height, 0]);var escala = d3.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://docinho.github.io/lab3---vis/post/static/radial-veiculos/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docinho.github.io/lab3---vis/post/static/radial-veiculos/</guid>
-      <description>var svg = d3.select(&#34;svg&#34;),width = +svg.attr(&#34;width&#34;),height = +svg.attr(&#34;height&#34;),innerRadius = 180,outerRadius = Math.min(width, height) / 2,g = svg.append(&#34;g&#34;).attr(&#34;transform&#34;, &#34;translate(&#34; + width / 2 + &#34;,&#34; + height / 2 + &#34;)&#34;);var x = d3.scaleBand().range([0, 2 * Math.PI]).align(0);var y = d3.scaleRadial().range([innerRadius, outerRadius]);var z = d3.scaleOrdinal().range([&#34;#7b6888&#34;, &#34;#6b486b&#34;, &#34;#a05d56&#34;, &#34;#d0743c&#34;, &#34;#ff8c00&#34;]);d3.csv(&#34;data2.csv&#34;, function(d, i, columns) {for (i = 1, t = 0; i </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://docinho.github.io/lab3---vis/post/static/tabela-carros/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docinho.github.io/lab3---vis/post/static/tabela-carros/</guid>
-      <description>JS Binsvg {margin-right: 2px;margin-left: 2px;}var width = 50,height = 50;var drag = d3.behavior.drag().origin(function(d) { return d; });var svg = d3.select(&#34;body&#34;).append(&#34;div&#34;).selectAll(&#34;svg&#34;).data(d3.range(596).map(function() { return {x: width / 2, y: height / 2}; })).enter().append(&#34;svg&#34;).attr(&#34;width&#34;, width).attr(&#34;height&#34;, height);svg.append(&#39;svg:image&#39;).attr({&#39;xlink:href&#39;: &#39;https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Aiga_bus_on_green_circle.svg/2000px-Aiga_bus_on_green_circle.svg.png&#39;, // can also add svg file herex: 5,y: 5,width: 40,height: 40}).</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://docinho.github.io/lab3---vis/post/static/tabela-geral/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://docinho.github.io/lab3---vis/post/static/tabela-geral/</guid>
-      <description>JS Binsvg {margin-right: 2px;margin-left: 2px;}var width = 50,height = 50;var drag = d3.behavior.drag().origin(function(d) { return d; });var svg = d3.select(&#34;body&#34;).append(&#34;div&#34;).selectAll(&#34;svg&#34;).data(d3.range(164).map(function() { return {x: width / 2, y: height / 2}; })).enter().append(&#34;svg&#34;).attr(&#34;width&#34;, width).attr(&#34;height&#34;, height);svg.append(&#39;svg:image&#39;).attr({&#39;xlink:href&#39;: &#39;https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Victoria_bus_logo.svg/1023px-Victoria_bus_logo.svg.png&#39;, // can also add svg file herex: 5,y: 5,width: 40,height: 40}).</description>
-    </item>
-    
   </channel>
 </rss>

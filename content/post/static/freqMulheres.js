@@ -25,7 +25,7 @@ chart.append('text')
 let parseTime = d3.timeParse("%H:%M");
 let color1 = ['#a6cee3', '#1f78b4', '#b2df8a'];
 
-d3.csv("data2.csv", function(data){
+d3.csv("../static/mulheres.csv", function(data){
   
   data.forEach(function(d) {
       d.horarioInicial = parseTime(d.horarioInicial);

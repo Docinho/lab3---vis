@@ -10,7 +10,7 @@ var pack = d3.pack()
 .size([width, height])
 .padding(1.5);
 
-d3.csv("data.csv", function(d) {
+d3.csv("../static/data.csv", function(d) {
 d.value = +d.value;
 if (d.value) return d;
 }, function(error, classes) {

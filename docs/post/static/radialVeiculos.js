@@ -13,16 +13,16 @@ var y = d3.scaleRadial()
     .range([innerRadius, outerRadius]);
 
 var z = d3.scaleOrdinal()
-    .range(["#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+    .range(["#7b6888", "#6b486b", "#a05d56", "#d0743c"]);
 
-d3.csv("data2.csv", function(d, i, columns) {
+d3.csv("../static/veiculos.csv", function(d, i, columns) {
   for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
   d.total = t;
   return d;
 }, function(error, data) {
   if (error) throw error;
 
-  x.domain(data.map(function(d) { return d.horarioInicial; }));
+  x.domain(data.map(function(d) { return d.hora; }));
   y.domain([0, d3.max(data, function(d) { return d.total; })]);
   z.domain(data.columns.slice(1));
 
@@ -37,8 +37,8 @@ d3.csv("data2.csv", function(d, i, columns) {
       .attr("d", d3.arc()
           .innerRadius(function(d) { return y(d[0]); })
           .outerRadius(function(d) { return y(d[1]); })
-          .startAngle(function(d) { return x(d.data.horarioInicial); })
-          .endAngle(function(d) { return x(d.data.horarioInicial) + x.bandwidth(); })
+          .startAngle(function(d) { return x(d.data.hora); })
+          .endAngle(function(d) { return x(d.data.hora) + x.bandwidth(); })
           .padAngle(0.01)
           .padRadius(innerRadius));
 
@@ -47,15 +47,15 @@ d3.csv("data2.csv", function(d, i, columns) {
     .data(data)
     .enter().append("g")
       .attr("text-anchor", "middle")
-      .attr("transform", function(d) { return "rotate(" + ((x(d.horarioInicial) + x.bandwidth() / 2) * 180 / Math.PI - 90) + ")translate(" + innerRadius + ",0)"; });
+      .attr("transform", function(d) { return "rotate(" + ((x(d.hora) + x.bandwidth() / 2) * 180 / Math.PI - 90) + ")translate(" + innerRadius + ",0)"; });
 
   label.append("line")
       .attr("x2", -5)
       .attr("stroke", "#000");
 
   label.append("text")
-      .attr("transform", function(d) { return (x(d.horarioInicial) + x.bandwidth() / 2 + Math.PI / 2) % (2 * Math.PI) < Math.PI ? "rotate(90)translate(0,16)" : "rotate(-90)translate(0,-9)"; })
-      .text(function(d) { return d.horarioInicial; });
+      .attr("transform", function(d) { return (x(d.hora) + x.bandwidth() / 2 + Math.PI / 2) % (2 * Math.PI) < Math.PI ? "rotate(90)translate(0,16)" : "rotate(-90)translate(0,-9)"; })
+      .text(function(d) { return d.hora; });
 
   var yAxis = g.append("g")
       .attr("text-anchor", "middle");

@@ -20,7 +20,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Hugo 0.30.2 with theme Tranquilpeak 0.4.3-BETA">
-    <title>Visualização Pluviométrica de Boqueirão</title>
+    <title>E ai? Vamo lá no acude?</title>
     <meta name="author" content="Livia Cavalcanti">
     <meta name="keywords" content="">
 
@@ -28,20 +28,17 @@
     
 
     
-    <meta name="description" content="Em azul nós temos os meses com chuvas acima de 80mm a maior parte da precipitação. Eles estão representads de azul e são Abril, Maio, Junho e Julho.
-
+    <meta name="description" content="O Açude Velho é um dos cartões portais mais importantes da cidade de Campina Grande, recebendo muita atenção dos visitantes e dos moradores. Agora ele irá receber um olhar mais especial, com os dados coletados por profissionais de urbanismo, vamos olhar algumas características da circulação de transeuntes e veículos no lugar.
 ">
-    <meta property="og:description" content="Em azul nós temos os meses com chuvas acima de 80mm a maior parte da precipitação. Eles estão representads de azul e são Abril, Maio, Junho e Julho.
-
+    <meta property="og:description" content="O Açude Velho é um dos cartões portais mais importantes da cidade de Campina Grande, recebendo muita atenção dos visitantes e dos moradores. Agora ele irá receber um olhar mais especial, com os dados coletados por profissionais de urbanismo, vamos olhar algumas características da circulação de transeuntes e veículos no lugar.
 ">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Visualização Pluviométrica de Boqueirão">
-    <meta property="og:url" content="/post/labd3/">
+    <meta property="og:title" content="E ai? Vamo lá no acude?">
+    <meta property="og:url" content="/post/acude/">
     <meta property="og:site_name" content="Compartilhando experiências com visualização">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Compartilhando experiências com visualização">
-    <meta name="twitter:description" content="Em azul nós temos os meses com chuvas acima de 80mm a maior parte da precipitação. Eles estão representads de azul e são Abril, Maio, Junho e Julho.
-
+    <meta name="twitter:description" content="O Açude Velho é um dos cartões portais mais importantes da cidade de Campina Grande, recebendo muita atenção dos visitantes e dos moradores. Agora ele irá receber um olhar mais especial, com os dados coletados por profissionais de urbanismo, vamos olhar algumas características da circulação de transeuntes e veículos no lugar.
 ">
     
     
@@ -217,7 +214,7 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      Visualização Pluviométrica de Boqueirão
+      E ai? Vamo lá no acude?
     </h1>
   
   
@@ -236,81 +233,31 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>Em azul nós temos os meses com chuvas acima de 80mm a maior parte da precipitação. Eles estão representads de azul e são Abril, Maio, Junho e Julho.
+              <p>O Açude Velho é um dos cartões portais mais importantes da cidade de Campina Grande, recebendo muita atenção dos visitantes e dos moradores. Agora ele irá receber um olhar mais especial, com os dados coletados por profissionais de urbanismo, vamos olhar algumas características da circulação de transeuntes e veículos no lugar.
+</p>
 
-<script src="https://d3js.org/d3.v4.min.js"></script></p>
+<p>Localizado num ponto central da cidade, o Açude possui um fluxo intenso de veículos motorizados, sendo os carros os mais presentes.
+<meta charset="utf-8">
+<svg width="960" height="960" font-family="sans-serif" font-size="10"></svg>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://docinho.github.io/lab3---vis/post/static/d3ScaleRadial.js"></script>
+<script src="https://docinho.github.io/lab3---vis/post/static/radialVeiculos.js"></script></p>
 
-<script type="text/javascript">
-    const alturaSVG = 450, larguraSVG = 900;
-    const margin = {top: 10, right: 20, bottom:50, left: 45},
-    larguraVis = larguraSVG - margin.left - margin.right,
-    alturaVis = alturaSVG - margin.top - margin.bottom;
-          
-    
+<p>De forma, talvez surpreendente, é possível notar no gráfico acima que há uma circulação considerável de ônibus nas regiões que foram assistidas. Eles representam uma frota diária de 596 veículos.</p>
 
-    function desenhaVis(dados) {
-        /*
-       * Prepara onde adicionaremos a visualizacao
-       */
-       let grafico = d3.select('#chart') 
-            .append('svg')
-            .attr('width', larguraVis + margin.left + margin.right)
-            .attr('height', alturaVis + margin.top + margin.bottom)
-            .append('g') 
-            .attr('transform', 'translate(' +  margin.left + ',' + margin.top + ')');
+<p>O que é apenas um por cento do total de carros contabilizados. Todavia, considerando que cada carro tem, em média, duas pessoas, seriam necessários, apenas, 164 ônibus para transportá-las.
+<svg width="400" height="400" font-family="sans-serif" font-size="10" text-anchor="middle"></svg>
+<script src="https://docinho.github.io/lab3---vis/post/static/carrosOnibus.js"></script></p>
 
-       /*
-       * As escalas
-       */
-        let x = d3.scaleLinear() 
-                .domain([0, d3.max(dados, (d) => d.noventa_percentil)])
-                .range([0,larguraVis/2]);
-        let y = d3.scaleLinear() 
-                 .domain([0, d3.max(dados, (d, i) => d.dez_percentil)])
-                 .range([0, alturaVis])
-                 .rangeRound([alturaVis, 0]);
-         /*
-       * As marcas
-       */
-      grafico.selectAll('g')
-              .data(dados)
-              .enter()
-                .append('circle')
-                     // usando a escala definida acima
-                  .attr('cy', d => y(d.dez_percentil))
-                  .attr('cx', d => x(d.noventa_percentil))
-                  .attr('r', 10)
-                  .attr('fill', d => {if(d.mediana > 80) {return "blue";}else{return "red";}})
+<p>Ou seja, dez por cento do total de ônibus são suficientes para evitar que mais de 56.000 carros circulem naquela região. O que nos faz levantar outras hipóteses para o não uso do transporte público pelos campinenses, como preço da tarifa e atrasos dos carros e, consequente, superlotação.</p>
 
-       /*
-       * Os eixos
-       */
-       grafico.append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + alturaVis + ")")
-            .call(d3.axisBottom(x)); 
-        grafico.append('g')
-            .attr('transform', 'translate(0,0)')
-            .call(d3.axisLeft(y))  
-
-        grafico.append("text")
-            .attr("transform", "translate(-30," + (alturaVis + margin.top)/2 + ") rotate(-90)")
-            .text("10-percentil");
-        grafico.append("text")
-            .attr("transform", "translate(" + ((larguraVis + margin.right)/2) + "," + (alturaVis +35) + " )")
-            .text("90-percentil");
-        
-        
-    }
-
-    d3.json('/lab3---vis/post/static/boqueirao-por-mes.json', function(dados) {
-        desenhaVis(dados);
-        });
-</script>
-
-<div id = "chart">
-
-</div>
+<p>Para além disso, o Açude Velho é visto como um lugar de recreação e de prática de atividade física. Pelo senso comum, as mulheres são mais vaidosas, mas elas não são as maiores frequentadoras do local, havendo uma lacuna maior da sua frequência nos horários de fim de manhã e começo da tarde. De fato, período não recomendado para a prática de atividade física.
+A despeito disso, o horário noturno também é pouco frequentado, fato que pode ser devido, tendo em vista os números de criminalidade no município, em virtude do perigo de transitar a pé, muitas vezes, sem policiamento.
+<svg id="chart"></svg>
+<style src = "/post/static/freqMulheres.css"></style>
+<div id = "visualizacao">
+<script src="https://docinho.github.io/lab3---vis/post/static/freqMulheres.js"></script>
+</id></p>
               
             </div>
           </div>
@@ -325,7 +272,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://docinho.github.io/lab3---vis/post/acude/" data-tooltip="E ai? Vamo lá no acude?">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">PRÓXIMO</span>
@@ -333,7 +280,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://docinho.github.io/lab3---vis/post/lab3/" data-tooltip="Analisando os dados de volume de água do Epitácio Pessoa.">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://docinho.github.io/lab3---vis/post/labd3/" data-tooltip="Visualização Pluviométrica de Boqueirão">
               
                   <span class="hide-xs hide-sm text-small icon-mr">ANTERIOR</span>
                   <i class="fa fa-angle-right"></i>
@@ -351,19 +298,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://docinho.github.io/lab3---vis/post/labd3/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://docinho.github.io/lab3---vis/post/acude/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://docinho.github.io/lab3---vis/post/labd3/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://docinho.github.io/lab3---vis/post/acude/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://docinho.github.io/lab3---vis/post/labd3/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://docinho.github.io/lab3---vis/post/acude/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -411,7 +358,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://docinho.github.io/lab3---vis/post/acude/" data-tooltip="E ai? Vamo lá no acude?">
+                <a class="post-action-btn btn btn--disabled">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">PRÓXIMO</span>
@@ -419,7 +366,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://docinho.github.io/lab3---vis/post/lab3/" data-tooltip="Analisando os dados de volume de água do Epitácio Pessoa.">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://docinho.github.io/lab3---vis/post/labd3/" data-tooltip="Visualização Pluviométrica de Boqueirão">
               
                   <span class="hide-xs hide-sm text-small icon-mr">ANTERIOR</span>
                   <i class="fa fa-angle-right"></i>
@@ -437,19 +384,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://docinho.github.io/lab3---vis/post/labd3/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://docinho.github.io/lab3---vis/post/acude/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://docinho.github.io/lab3---vis/post/labd3/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://docinho.github.io/lab3---vis/post/acude/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://docinho.github.io/lab3---vis/post/labd3/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://docinho.github.io/lab3---vis/post/acude/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -479,19 +426,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdocinho.github.io%2Flab3---vis%2Fpost%2Flabd3%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdocinho.github.io%2Flab3---vis%2Fpost%2Facude%2F">
           <i class="fa fa-facebook-official"></i><span>Compartilhar no Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fdocinho.github.io%2Flab3---vis%2Fpost%2Flabd3%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fdocinho.github.io%2Flab3---vis%2Fpost%2Facude%2F">
           <i class="fa fa-twitter"></i><span>Compartilhar no Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fdocinho.github.io%2Flab3---vis%2Fpost%2Flabd3%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fdocinho.github.io%2Flab3---vis%2Fpost%2Facude%2F">
           <i class="fa fa-google-plus"></i><span>Compartilhar no Google&#43;</span>
         </a>
       </li>
@@ -697,9 +644,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/docinho.github.io\/lab3---vis\/post\/labd3\/';
+          this.page.url = 'https:\/\/docinho.github.io\/lab3---vis\/post\/acude\/';
           
-            this.page.identifier = '\/post\/labd3\/'
+            this.page.identifier = '\/post\/acude\/'
           
         };
         (function() {
