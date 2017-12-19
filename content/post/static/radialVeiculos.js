@@ -1,4 +1,4 @@
-var svg = d3.select("svg"),
+var svg = d3.select("#veiculos"),
     width = +svg.attr("width"),
     height = +svg.attr("height"),
     innerRadius = 180,

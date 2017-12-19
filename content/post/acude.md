@@ -9,15 +9,19 @@ O Açude Velho é um dos cartões portais mais importantes da cidade de Campina 
 
 Localizado num ponto central da cidade, o Açude possui um fluxo intenso de veículos motorizados, sendo os carros os mais presentes.
 <meta charset="utf-8">
-<svg width="960" height="960" font-family="sans-serif" font-size="10"></svg>
+<svg id = "veiculos" width="960" height="960" font-family="sans-serif" font-size="10"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="/post/static/d3ScaleRadial.js"></script>
 <script src="/post/static/radialVeiculos.js"></script>
 
 De forma, talvez surpreendente, é possível notar no gráfico acima que há uma circulação considerável de ônibus nas regiões que foram assistidas. Eles representam uma frota diária de 596 veículos.
 
+
+
 O que é apenas um por cento do total de carros contabilizados. Todavia, considerando que cada carro tem, em média, duas pessoas, seriam necessários, apenas, 164 ônibus para transportá-las.
-<svg width="400" height="400" font-family="sans-serif" font-size="10" text-anchor="middle"></svg>
+
+
+<svg id = "onibus" width="350" height="350" font-family="sans-serif" font-size="10" text-anchor="middle"></svg>
 <script src="/post/static/carrosOnibus.js"></script>
 
 Ou seja, dez por cento do total de ônibus são suficientes para evitar que mais de 56.000 carros circulem naquela região. O que nos faz levantar outras hipóteses para o não uso do transporte público pelos campinenses, como preço da tarifa e atrasos dos carros e, consequente, superlotação.
