@@ -92,7 +92,7 @@ d3.csv("../static/mulheres.csv", function(data){
     .attr('cx', (d) => x1(d.horarioInicial))
     .attr('cy', (d) => y1(d.total))
     .attr('r', 5)
-    .style('fill', (d) => d.local == 'burrinhos' ? color[0] : (d.local == "jackson" ?  color[1]: color[2]))
+    .style('fill', (d) => d.local == 'burrinhos' ? color1[0] : (d.local == "jackson" ?  color1[1]: color1[2]))
     .on('mouseover', (d) => {
       tooltip.transition()
         .duration(100)		
