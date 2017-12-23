@@ -27,8 +27,7 @@
       <pubDate>Tue, 28 Nov 2017 10:09:17 -0300</pubDate>
       
       <guid>https://docinho.github.io/lab3---vis/post/interacaoonibuscarrosacude/</guid>
-      <description>watch time vs. age group total time watched: 1411 minutes
-Bob&#39;s  Burrinhos  Jackson  inicio        margin = {top: 40,right: 20,bottom: 60,left: 60}, width = 800, height = 600; const x2 = d3.scaleTime() .range([0, width]); const y2 = d3.scaleLinear() .range([height, 0]); const chart = d3.select(&#39;#chart&#39;) .attr(&#39;width&#39;, width + margin.left + margin.right) .attr(&#39;height&#39;, height + margin.top + margin.bottom) .append(&#39;g&#39;) .attr(&#39;transform&#39;, `translate(${margin.left}, ${margin.top})`); chart.</description>
+      <description>Bob&#39;s  Burrinhos  Jackson  inicio        onibusCarro = [ { &#34;horario_inicial&#34;: &#34;06:00&#34;, &#34;local&#34;: &#34;bobs&#34;, &#34;qnt_veiculo&#34;: 30, &#34;tipo&#34;: &#34;carros&#34; }, { &#34;horario_inicial&#34;: &#34;06:00&#34;, &#34;local&#34;: &#34;jackson&#34;, &#34;qnt_veiculo&#34;: 21, &#34;tipo&#34;: &#34;carros&#34; }, { &#34;horario_inicial&#34;: &#34;06:15&#34;, &#34;local&#34;: &#34;bobs&#34;, &#34;qnt_veiculo&#34;: 51, &#34;tipo&#34;: &#34;carros&#34; }, { &#34;horario_inicial&#34;: &#34;06:15&#34;, &#34;local&#34;: &#34;burrinhos&#34;, &#34;qnt_veiculo&#34;: 514, &#34;tipo&#34;: &#34;carros&#34; }, { &#34;horario_inicial&#34;: &#34;06:15&#34;, &#34;local&#34;: &#34;jackson&#34;, &#34;qnt_veiculo&#34;: 30, &#34;tipo&#34;: &#34;carros&#34; }, { &#34;horario_inicial&#34;: &#34;06:30&#34;, &#34;</description>
     </item>
     
     <item>
