@@ -31,6 +31,10 @@ d3.csv("../static/veiculos.csv", function(d, i, columns) {
     .data(d3.stack().keys(data.columns.slice(1))(data))
     .enter().append("g")
       .attr("fill", function(d) { return z(d.key); })
+      .attr("opacity", .8)
+    .on('mouseover', (d) => {
+        d3.selectAll("g")
+        .style("opacity","2")})
     .selectAll("path")
     .data(function(d) { return d; })
     .enter().append("path")
@@ -40,9 +44,11 @@ d3.csv("../static/veiculos.csv", function(d, i, columns) {
           .startAngle(function(d) { return x(d.data.hora); })
           .endAngle(function(d) { return x(d.data.hora) + x.bandwidth(); })
           .padAngle(0.01)
-          .padRadius(innerRadius));
+          .padRadius(innerRadius))
+        
+    ;
 
-  var label = g.append("g")
+    var label = g.append("g")
     .selectAll("g")
     .data(data)
     .enter().append("g")

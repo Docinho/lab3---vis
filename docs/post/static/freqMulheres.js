@@ -50,7 +50,7 @@ d3.csv("../static/mulheres.csv", function(data){
     .attr('transform', 'rotate(-90)')
     .attr('dx', '-20em')
     .attr('dy', '-2.5em')
-    .text('Frequencia das mulheres no açude');
+    .text('Frequência das mulheres no açude');
 
   chart.append('circle')
     .attr('cx', '400')
@@ -85,7 +85,7 @@ d3.csv("../static/mulheres.csv", function(data){
     .attr('y', '165')
     .text("Bob's");
 
-  chart.selectAll('.circle')
+  chart.selectAll('#circle')
     .data(data)
     .enter().append('circle')
     .attr('class','circle')
